@@ -1,0 +1,20 @@
+{
+  "name" : "kafka-connect-ehrbase",
+  "version" : "0.1.0",
+  "title" : "Kafka Connect EHRbase",
+  "description" : "The EHRbase source connector enables the import of change logs for \"COMPOSITION\" and \"EHR_STATUS\" contributions stored on an EHRbase server into Kafka topics. System events — such as creations, modifications, or deletions — are retrieved by periodically executing SQL queries directly on the EHRbase server’s PostgreSQL database via a JDBC connection. These queries explore the relevant EHRbase tables in chronological order to process changes from oldest to newest. For each retrieved change, the corresponding version of the canonical object is reconstructed with the EHRbase SDK and published to the Kafka topics. Once the complete server history has been imported, the connector continues running periodically to capture and import new changes as they occur.",
+  "owner" : {
+    "username" : "joselalvarez",
+    "name" : "José Luis Álvarez"
+  },
+  "tags" : [ "openehr", "ehrbase"],
+  "logo" : "assets/ehrbase.jpg",
+  "documentation_url" : "https://github.com/joselalvarez/kafka-connect-ehrbase",
+  "source_url" : "https://github.com/joselalvarez/kafka-connect-ehrbase",
+  "license" : [ {
+    "name" : "Apache License 2.0",
+    "url" : "https://www.apache.org/licenses/LICENSE-2.0"
+  } ],
+  "component_types" : [ "source" ],
+  "release_date" : "2025-08-05"
+}
